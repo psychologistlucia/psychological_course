@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Курс психолога</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #ccae8d;
+            font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            color: #000000;
+            line-height: 1.4;
+            padding: 20px 16px;
+        }
+        .feed {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ccae8d;
+        }
+        .block {
+            padding: 24px 20px;
+            background: transparent;
+        }
+        .block:not(:first-child) {
+            border-top: 1px solid rgba(255, 255, 255, 0.6);
+        }
+        .main-image {
+            width: 100%;
+            display: block;
+            margin: 0 auto;
+            border-radius: 24px;
+        }
+        .first-block {
+            border-top-left-radius: 32px;
+            border-top-right-radius: 32px;
+            text-align: center;
+        }
+        .last-block {
+            border-bottom-left-radius: 32px;
+            border-bottom-right-radius: 32px;
+        }
+        .title-line {
+            display: flex;
+            justify-content: center;
+            align-items: baseline;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 12px;
+        }
+        .title-pattaya {
+            font-family: 'Pattaya', cursive;
+            font-size: 2.6rem;
+            font-weight: normal;
+            line-height: 1.2;
+        }
+        .title-roboto {
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        .subtitle-poiret {
+            font-family: 'Poiret One', cursive;
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+        .text-great {
+            font-family: 'Great Vibes', cursive;
+            font-size: 1.2rem;
+            margin-top: 16px;
+        }
+        h2 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        .quote {
+            font-style: italic;
+            background: #f5efe0;
+            padding: 12px 16px;
+            border-radius: 24px;
+            margin: 16px 0;
+            font-size: 0.95rem;
+            border-left: 4px solid #d97a2b;
+        }
+        .list {
+            margin: 12px 0;
+            padding-left: 0;
+            list-style: none;
+        }
+        .list li {
+            margin-bottom: 8px;
+            padding-left: 1rem;
+            position: relative;
+        }
+        .list li::before {
+            content: "—";
+            position: absolute;
+            left: 0;
+        }
+        .tariff {
+            margin-bottom: 24px;
+        }
+        .tariff-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        .tariff-list.numered {
+            list-style: decimal;
+            padding-left: 1.5rem;
+        }
+        .price {
+            margin-top: 16px;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        .price s {
+            color: #777;
+            margin-right: 12px;
+            font-size: 1rem;
+        }
+        .price strong {
+            color: #d97a2b;
+            font-size: 1.4rem;
+        }
+        .installment-note {
+            font-size: 0.8rem;
+            color: #555;
+            margin-top: 8px;
+            text-align: center;
+        }
+        .sub-list {
+            list-style: none;
+            padding-left: 1.5rem;
+            margin-top: 6px;
+        }
+        .sub-list li {
+            margin-bottom: 4px;
+            position: relative;
+            padding-left: 1rem;
+        }
+        .sub-list li::before {
+            content: "—";
+            position: absolute;
+            left: 0;
+        }
+        .important ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .important li {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        .important li::before {
+            content: "✔";
+            position: absolute;
+            left: 0;
+            color: #d97a2b;
+        }
+        .important {
+            background: #f5efe0;
+            padding: 16px;
+            border-radius: 24px;
+            margin-top: 20px;
+        }
+        .important p {
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        hr {
+            margin: 16px 0;
+            border: 0;
+            height: 1px;
+            background: #e0d5c0;
+        }
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-top: 16px;
+        }
+        button {
+            padding: 16px 24px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 60px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-align: center;
+            border: none;
+            font-family: inherit;
+        }
+        .btn-primary {
+            background: linear-gradient(95deg, #d97a2b, #e8923a);
+            color: white;
+        }
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid #d97a2b;
+            color: #d97a2b;
+        }
+        .btn-primary:hover, .btn-secondary:hover {
+            transform: scale(1.02);
+            opacity: 0.9;
+        }
+        footer {
+            text-align: center;
+            margin-top: 24px;
+            font-size: 0.8rem;
+            color: #7a6a5a;
+        }
+        .fade-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .schedule-text, .author-text {
+            text-align: center;
+        }
+        .schedule-text p, .author-text p {
+            margin-bottom: 12px;
+        }
+        .italic-text {
+            font-style: italic;
+        }
+        .bold-underline {
+            font-weight: 700;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="feed">
+        <img src="main_image.png" alt="Психолог" class="main-image fade-up" id="mainImg">
+
+        <div class="block first-block fade-up" id="block1">
+            <div class="title-line">
+                <div class="title-pattaya">это</div>
+                <div class="title-roboto">про тебя</div>
+            </div>
+            <div class="subtitle-poiret">Курс для женщин, которые запутались в отношениях и устали жить в состоянии «терпеть или уходить»</div>
+            <div class="text-great">Этот курс не для всех!<br>Он для тех, кто готов взять на себя ответственность, а не продолжать надеяться, что всё решится само.</div>
+        </div>
+
+        <div class="block fade-up" id="block2">
+            <h2>«Терпеть нельзя расстаться»</h2>
+            <p style="font-weight: 500;">Как понять, где поставить точку — и перестать жить в сомнениях</p>
+            <p style="margin-top: 16px;"><strong>Здесь вы разберётесь:</strong></p>
+            <ul class="list">
+                <li>— что на самом деле происходит в ваших отношениях</li>
+                <li>— есть ли у них шанс или это уже тупик</li>
+                <li>— и как принять решение без самообмана, о котором не будете жалеть</li>
+            </ul>
+            <div class="important">
+                <p><strong>ВАЖНО:</strong></p>
+                <ul>
+                    <li>Только научный подход, так как я психолог с научной степенью. Без эзотерики и кармы рода. Объясню сочетание нейробиологии и вашего поведения в жизни;</li>
+                    <li>Уроки не в записи! <strong>4 живых</strong> эфиров на протяжении 8 дней. (Запись для тех, кто не сможет присутствовать, будет);</li>
+                    <li>Обратная связь от меня в общем чате только от меня. Никаких кураторов;</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="block fade-up" id="block3">
+            <h3>1 эфир: «Терпеть нельзя расстаться»<br>Где поставите запятую?</h3>
+            <div class="quote">«Он не плохой, но мне рядом с ним пусто»<br>«Мы не ругаемся, но и не близки»</div>
+            <p><strong>После эфира вы поймете:</strong></p>
+            <ul class="list">
+                <li>— Почему ты застряла в состоянии «уйти/остаться»</li>
+                <li>— Критерии «плохого» брака (через факты, не ощущения)</li>
+                <li>— Что на самом деле называется любовью (и чем она не является)</li>
+                <li>— Самое разрушительное состояние — одиночество вдвоём</li>
+                <li>— Где проходит грань: кризис или уже тупик</li>
+            </ul>
+            <hr>
+            <h3>2 эфир: «Он абьюзер или мне кажется? Или это Я?<br>Разбор реальности без ярлыков»</h3>
+            <div class="quote">«Он сначала холодный, потом идеальный. Я не понимаю, он меня любит или нет»</div>
+            <p><strong>После эфира вы поймете:</strong></p>
+            <ul class="list">
+                <li>— Почему все стали «нарциссами» (и где правда, а где мода)</li>
+                <li>— Абьюз: признаки, но без драматизации</li>
+                <li>— Эмоциональные качели: как они формируются</li>
+                <li>— Манипуляции: как они выглядят в реальности</li>
+                <li>— Разница между НРЛ и ПРЛ</li>
+                <li>— Самый неудобный вопрос: это он такой... или это динамика между вами?</li>
+            </ul>
+        </div>
+
+        <div class="block fade-up" id="block4">
+            <h3>3 эфир: «Почему ты выбираешь именно такие отношения»</h3>
+            <div class="quote">«Мама терпела и я терплю»<br>«Любовь <s>не равно</s> страданию»</div>
+            <p><strong>После эфира вы поймете:</strong></p>
+            <ul class="list">
+                <li>— Как детско-родительские сценарии влияют на выбор партнёра</li>
+                <li>— Что на самом деле значит «простить» (а не забыть и терпеть)</li>
+                <li>— Почему ты терпишь / боишься уйти</li>
+                <li>— Как формируется страх одиночества</li>
+            </ul>
+            <hr>
+            <h3>4 эфир: «Почему ты теряешь себя — и как принять решение»</h3>
+            <div class="quote">«Ты не выбираешь, потому что боишься, и потому что «непонятно»»</div>
+            <p><strong>После эфира вы поймете:</strong></p>
+            <ul class="list">
+                <li>— Почему ты становишься «неинтересной» (и это не про внешность)</li>
+                <li>— Что такое любовь к себе без инфоцыганства</li>
+                <li>— Измены: что они на самом деле означают (жёстко, но честно)</li>
+                <li>— Как твои гормоны влияют на отношения</li>
+            </ul>
+        </div>
+
+        <div class="block fade-up" id="block5">
+            <div class="tariff">
+                <div class="tariff-title">Групповой:</div>
+                <ul class="tariff-list numered">
+                    <li>4 живых эфира в течение 8 дней;</li>
+                    <li>Чат с обратной связью от меня, где сможете задавать свои вопросы во время и после эфиров;</li>
+                    <li>Поддержка единомышленниц в чате;</li>
+                </ul>
+                <div class="price">
+                    Стоимость: <s>19.900</s> <strong>9.900</strong>
+                </div>
+            </div>
+            <hr>
+            <div class="tariff">
+                <div class="tariff-title">Групповой + консультации</div>
+                <ul class="tariff-list numered">
+                    <li>4 живых эфира в течение 8 дней;</li>
+                    <li>Чат с обратной связью от меня, где сможете задавать вопросы во время и после эфиров;</li>
+                    <li>Поддержка единомышленниц в чате;</li>
+                    <li>2 моих личных консультации во время курса.</li>
+                    <li>
+                        Запись эфира «Финансы по женски и самореализация», где разберете:
+                        <ul class="sub-list">
+                            <li>- Как сохранить отношения в период финансового кризиса в семье;</li>
+                            <li>- Как увеличить свой денежный потенциал без медитаций, а научно;</li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="price">
+                    Стоимость: <s>29.900</s> <strong>19.900</strong>
+                </div>
+                <div class="installment-note">*по запросу имеется рассрочка в обоих тарифах</div>
+            </div>
+        </div>
+
+        <div class="block fade-up" id="block6">
+            <div class="schedule-text">
+                <p><strong>Расписание курса:</strong></p>
+                <p>Старт: 20 апреля</p>
+                <p>Занятия:<br>20.04 (пн) - 19:00-20:30<br>22.04 (ср) - 19:00-20:30<br>24.04 (пт) - 19:00-20:30<br>27.04 (пн) - 19:00-20:30</p>
+                <p>Живые эфиры на платформе.<br>Запись всех эфиров будет доступна в этот же день.<br>Записи остаются у вас навсегда.</p>
+                <p class="italic-text">При оплате тарифа с консультациями,<br>дату и время консультации обговариваем индивидуально в удобное вам время.</p>
+            </div>
+        </div>
+
+        <div class="block fade-up" id="block7">
+            <div class="author-text">
+                <p>Автор курса: психолог Люция,<br>клинический психолог, магистр психологии.<br>1000+ консультаций по всему миру.<br>20 лет семейной жизни и 4 детей.<br>Работаю на научном подходе. Объясняю,<br>как связаны ваша нейробиология мозга<br>и ваше поведение.</p>
+                <p class="bold-underline">«Вы не обязаны сохранять или прекращать отношения.<br>Но вы точно можете перестать<br>жить в состоянии неопределённости»</p>
+                <p class="italic-text">Если ничего не менять —<br>через год вы будете в той же точке,<br>только успевшей сильнее.</p>
+            </div>
+        </div>
+
+        <div class="block last-block fade-up" style="text-align: center;">
+            <div class="buttons">
+                <button class="btn-primary" id="telegramBtn">Записаться через Telegram</button>
+                <button class="btn-secondary" id="maxBtn">Записаться через MAX</button>
+            </div>
+            <footer>Вы перейдёте в чат, где сможете задать вопросы и оформить доступ к курсу.</footer>
+        </div>
+    </div>
+
+    <script>
+        const fadeElements = document.querySelectorAll('.fade-up');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: "0px 0px -20px 0px" });
+        fadeElements.forEach(el => observer.observe(el));
+
+        function openLink(url) {
+            window.open(url, '_blank');
+        }
+
+        const TELEGRAM_URL = 'https://t.me/psycholog_lucia';
+        const MAX_URL = 'https://max.ru/u/f9LHodD0cOJkXMwRH-za-p7HVSTsI7vFrv3Lvnpi8nxAxzoz8hIGM150H7Y';
+
+        document.getElementById('telegramBtn').addEventListener('click', () => openLink(TELEGRAM_URL));
+        document.getElementById('maxBtn').addEventListener('click', () => openLink(MAX_URL));
+    </script>
+</body>
+</html>
